@@ -1,21 +1,6 @@
-/*
- * Copyright 2012 GitHub Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.github.mobile.core.issue;
 
-import static com.github.mobile.RequestCodes.ISSUE_LABELS_UPDATE;
 import android.accounts.Account;
 
 import com.github.mobile.R;
@@ -24,13 +9,15 @@ import com.github.mobile.ui.ProgressDialogTask;
 import com.github.mobile.ui.issue.LabelsDialog;
 import com.google.inject.Inject;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.eclipse.egit.github.core.IRepositoryIdProvider;
 import org.eclipse.egit.github.core.Issue;
 import org.eclipse.egit.github.core.Label;
 import org.eclipse.egit.github.core.service.LabelService;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static com.github.mobile.RequestCodes.ISSUE_LABELS_UPDATE;
 
 /**
  * Task to edit labels

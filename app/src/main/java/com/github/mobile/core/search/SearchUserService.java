@@ -1,25 +1,10 @@
-/*
- * Copyright 2013 GitHub Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.github.mobile.core.search;
 
-import static org.eclipse.egit.github.core.client.IGitHubConstants.CHARSET_UTF8;
-import static org.eclipse.egit.github.core.client.IGitHubConstants.PARAM_START_PAGE;
-import static org.eclipse.egit.github.core.client.IGitHubConstants.SEGMENT_USER;
-import static org.eclipse.egit.github.core.client.IGitHubConstants.SEGMENT_LEGACY;
-import static org.eclipse.egit.github.core.client.IGitHubConstants.SEGMENT_SEARCH;
+import org.eclipse.egit.github.core.IResourceProvider;
+import org.eclipse.egit.github.core.client.GitHubClient;
+import org.eclipse.egit.github.core.client.PagedRequest;
+import org.eclipse.egit.github.core.service.UserService;
 
 import java.io.IOException;
 import java.net.URLEncoder;
@@ -27,10 +12,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.eclipse.egit.github.core.IResourceProvider;
-import org.eclipse.egit.github.core.client.GitHubClient;
-import org.eclipse.egit.github.core.client.PagedRequest;
-import org.eclipse.egit.github.core.service.UserService;
+import static org.eclipse.egit.github.core.client.IGitHubConstants.CHARSET_UTF8;
+import static org.eclipse.egit.github.core.client.IGitHubConstants.PARAM_START_PAGE;
+import static org.eclipse.egit.github.core.client.IGitHubConstants.SEGMENT_LEGACY;
+import static org.eclipse.egit.github.core.client.IGitHubConstants.SEGMENT_SEARCH;
+import static org.eclipse.egit.github.core.client.IGitHubConstants.SEGMENT_USER;
 
 public class SearchUserService extends UserService {
 

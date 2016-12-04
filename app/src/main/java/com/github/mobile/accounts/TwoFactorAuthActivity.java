@@ -1,26 +1,6 @@
-/*
- * Copyright 2013 GitHub Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.github.mobile.accounts;
 
-import static android.content.DialogInterface.OnCancelListener;
-import static android.view.KeyEvent.ACTION_DOWN;
-import static android.view.KeyEvent.KEYCODE_ENTER;
-import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
-import static com.github.mobile.accounts.AccountConstants.ACCOUNT_TYPE;
-import static com.github.mobile.accounts.LoginActivity.configureSyncFor;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.AlertDialog;
@@ -44,16 +24,23 @@ import android.widget.TextView;
 import com.github.kevinsawicki.wishlist.ViewFinder;
 import com.github.mobile.R;
 import com.github.mobile.ui.LightProgressDialog;
-import com.github.mobile.ui.roboactivities.RoboActionBarActivity;
 import com.github.mobile.ui.TextWatcherAdapter;
-
-import java.io.IOException;
+import com.github.mobile.ui.roboactivities.RoboActionBarActivity;
 
 import org.eclipse.egit.github.core.User;
 import org.eclipse.egit.github.core.service.OAuthService;
 import org.eclipse.egit.github.core.service.UserService;
 
+import java.io.IOException;
+
 import roboguice.util.RoboAsyncTask;
+
+import static android.content.DialogInterface.OnCancelListener;
+import static android.view.KeyEvent.ACTION_DOWN;
+import static android.view.KeyEvent.KEYCODE_ENTER;
+import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
+import static com.github.mobile.accounts.AccountConstants.ACCOUNT_TYPE;
+import static com.github.mobile.accounts.LoginActivity.configureSyncFor;
 
 /**
  * Activity to enter two-factor authentication OTP code
